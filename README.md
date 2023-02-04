@@ -1,3 +1,4 @@
 # Test_task_FRONTEND
 
-TEST
+Задачи на сообразительность в Math_tasks
+Задачи на программирование в Dev_tasks
