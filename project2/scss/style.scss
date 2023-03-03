@@ -1,0 +1,385 @@
+@import 'null_styles.scss';
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Prata&family=Roboto:wght@300;400;500;700&display=swap');
+
+$fFam1: 'Playfair Display';
+$fFam2: 'Roboto';
+$fFam3: 'Prata';
+
+
+@mixin textProps($fontF, $weight, $size, $lineH, $color) {
+    font-family: $fontF;
+    font-style: normal;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $lineH;
+    color: $color;
+}
+
+@mixin buttonProps($btnColor) {
+    width: 205px;
+    height: 64px;
+    background: $btnColor;
+    @include textProps($fFam2, 500, 12px, 14px, #FFFFFF);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+@mixin itemProps () {
+    padding: 40px;
+    width: 370px;
+    height: 467px;
+    background: #FDFDFB;
+
+}
+
+.center1 {
+    padding-left: calc(50% - 506px);
+    padding-right: calc(50% - 506px);
+}
+
+.center2 {
+    padding-left: calc(50% - 585px);
+    padding-right: calc(50% - 585px);
+}
+
+.header {
+    height: 75px;
+    background: #FDFDFB;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header__logo {
+        display: flex;
+        gap: 5px;
+        align-items: flex-end;
+        @include textProps($fFam1, 400, 12px, 16px, #555248);
+        letter-spacing: 0.14em;
+    }
+
+    .header__menu {
+        display: flex;
+        gap: 65px;
+        @include textProps($fFam2, 400, 14px, 16px, #555248);
+    }
+
+    .header__icons {
+        display: flex;
+        position: relative;
+        gap: 23px;
+    }
+
+    .count_container {
+        position: relative;
+    }
+
+    .counter {
+        position: absolute;
+        top: -4px;
+        right: -5px;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        z-index: 2;
+        background: #E6C8B4;
+        @include textProps($fFam2, 400, 8px, 9px, #1B1A17);
+        text-align: center;
+        padding: 2px 1px;
+    }
+}
+
+.main__about {
+    background: #FDFDFB;
+    height: 768px;
+    display: flex;
+    align-items: center;
+}
+
+
+.about_left {
+    display: flex;
+    flex-direction: column;
+
+
+    h1 {
+        @include textProps($fFam1, 400, 45px, 60px, #1B1A17);
+        position: relative;
+        padding-bottom: 16px;
+    }
+
+    h1::before {
+        content: '';
+        position: absolute;
+        top: 35px;
+        left: -60px;
+        width: 50px;
+        border: 1px solid #8B8371;
+    }
+
+    p {
+        @include textProps($fFam1, 400, 30px, 40px, #1B1A17);
+        padding-bottom: 39px;
+    }
+
+    span {
+        @include textProps($fFam2, 300, 14px, 21px, rgba(27, 26, 23, 0.82));
+        padding-bottom: 64px;
+    }
+
+    button {
+        @include buttonProps(#444240);
+    }
+}
+
+.about_right {
+    width: 768px;
+    height: 768px;
+    background-image: url(../img/watch_main.svg), url(../img/background1.svg);
+    background-size: 768px 850px, auto 768px;
+    background-repeat: no-repeat, no-repeat;
+    background-position: 25px, 0;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+
+    span {
+        position: relative;
+        @include textProps($fFam3, 400, 16px, 22px, #1B1A17);
+
+        &:first-child::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            top: 10px;
+            right: -80px;
+            border: 1px solid #8B8371;
+
+
+        }
+
+        &:last-child::before {
+            content: '';
+            position: absolute;
+            width: 50px;
+            top: 10px;
+            left: -70px;
+            border: 1px solid #8B8371;
+        }
+    }
+
+    img {
+        padding-top: 2px;
+        padding-left: 5px;
+    }
+
+    .right_flex {
+        align-self: flex-end;
+        margin-right: -100px;
+    }
+}
+
+.main__popular {
+    height: 720px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        @include textProps($fFam1, 400, 32px, 43px, #1B1A17);
+    }
+
+    .popular_look-all {
+        position: relative;
+        align-self: end;
+        @include textProps($fFam2, 500, 16px, 19px, #444240);
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 101px;
+            border: 1px solid #C4C0B6;
+            bottom: -12px;
+            left: 0;
+        }
+    }
+}
+
+.popular__container {
+    display: flex;
+    gap: 34px;
+    padding-top: 30px;
+
+    .popular__item {
+        @include itemProps();
+
+        h3 {
+            @include textProps($fFam1, 700, 14px, 24px, rgba(27, 26, 23, 0.82));
+            letter-spacing: 0.03em;
+            padding-bottom: 10px
+        }
+
+        h4 {
+            @include textProps($fFam3, 400, 12px, 16px, rgba(27, 26, 23, 0.82));
+        }
+
+        .item-image {
+            width: 313px;
+            height: 313px;
+            padding-bottom: 20px;
+        }
+
+        .popular_more-info {
+            position: relative;
+            margin-left: 50px;
+            @include textProps($fFam1, 400, 16px, 21px, #1B1A17);
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 30px;
+                border: 1px solid #8B8371;
+                top: 10px;
+                left: -50px;
+            }
+        }
+    }
+}
+
+.main__quality {
+    height: 520px;
+    display: flex;
+
+    .quality_left {
+        width: 850px;
+        height: 520px;
+        background: #F7F5EF;
+        margin-right: 250px;
+
+        img {
+            padding-top: 52px;
+            padding-left: 550px;
+        }
+    }
+
+    .quality_right {
+        background: #FDFDFB;
+        margin-left: -350px;
+        padding-left: 400px;
+        display: flex;
+        flex-direction: column;
+        z-index: -2;
+
+
+        justify-content: center;
+        gap: 30px;
+        width: 100%;
+
+        h3 {
+
+            @include textProps($fFam1, 400, 32px, 43px, #1B1A17);
+        }
+
+        h4 {
+            width: 380px;
+            @include textProps($fFam2, 400, 16px, 24px, #444240);
+        }
+
+        button {
+            @include buttonProps(#D4B098);
+        }
+    }
+}
+
+.main__news {
+    height: 630px;
+    display: flex;
+
+    .news_left {
+        width: 542px;
+
+        .news__text {
+            h3 {
+                padding-top: 223px;
+                @include textProps($fFam1, 400, 32px, 43px, #1B1A17);
+                padding-bottom: 40px;
+            }
+
+            h4 {
+                @include textProps($fFam2, 400, 16px, 27px, #444240);
+                padding-bottom: 119px;
+
+                span {
+                    @include textProps($fFam2, 700, 16px, 27px, #262421)
+                }
+            }
+        }
+
+        .news__social {
+            display: flex;
+            gap: 18px;
+            align-items: center;
+        }
+    }
+
+    .news_right {
+        padding-top: 81px;
+        display: grid;
+        grid-template-rows: 228px 228px;
+        grid-template-columns: 242px 460px;
+        gap: 10px;
+    }
+
+    .right__item1 {
+        grid-column-start: 1;
+    }
+
+    .right__item2 {
+        grid-column-start: 1;
+        grid-row-start: 2;
+    }
+
+    .right__item3 {
+        grid-column-start: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+}
+
+.footer {
+    height: 275px;
+    background: #444240;
+
+    .footer__container {
+        display: flex;
+        padding-top: 80px;
+        align-items: center;
+        gap: 120px;
+
+        .footer__contaiter_item {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+
+            .item__title {
+                @include textProps($fFam1, 700, 14px, 19px, #FFFFFF);
+                letter-spacing: 0.14em;
+                text-transform: uppercase;
+            }
+
+            .item__description {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                a {
+                    @include textProps($fFam2, 400, 12px, 14px, rgba(255, 255, 255, 0.75));
+                }
+            }
+        }
+    }
+}
+
+.title_gap {
+    padding-bottom: 50px;
+}
