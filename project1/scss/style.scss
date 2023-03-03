@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import "null_styles.scss";
+
+$colBlack: #000000;
+$colWhite: #FFFFFF;
+$colGray: #828282;
+$colGreen: #66C05D;
+$colMoreGray: #333333;
+
+@mixin textProps($weight, $size, $lineH, $color) {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $lineH;
+    color: $color;
+}
+
+@mixin ovalProps ($width, $height, $brdRad, $bgCol, $brdCol) {
+    width: $width;
+    height: $height;
+    background: $bgCol;
+    border-radius: $brdRad;
+    border: 2px solid $brdCol;
+
+    &:hover {
+        background: $brdCol;
+        border: 2px solid $bgCol;
+        color: $bgCol;
+    }
+}
+
+.center {
+    padding-left: calc(50% - 555px);
+    padding-right: calc(50% - 555px);
+}
+
+.header__links {
+    display: flex;
+    gap: 30px;
+    height: 50px;
+    background: #EFEFEF;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__links a {
+    @include textProps(400, 14px, 16px, $colBlack );
+}
+
+.header__top {
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #EFEFEF;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo_text {
+    @include textProps(700, 36px, 42px, $colGreen );
+    letter-spacing: 0.1em;
+}
+
+.header__callBack {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.callBack_phone {
+    @include textProps(400, 16px, 19px, $colBlack )
+}
+
+.callBack_button {
+    @include ovalProps(170px, 40px, 40px, $colWhite, $colGreen );
+    @include textProps(400, 14px, 16px, $colBlack );
+}
+
+.header__menu {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.header__menu a {
+    @include textProps(400, 16px, 19px, $colBlack );
+}
+
+.main__about {
+    height: 604px;
+    background: $colGreen;
+    display: flex;
+    align-items: center;
+}
+
+.about_left {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.about_left h1 {
+    @include textProps(700, 58px, 46px, $colWhite);
+}
+
+.about_left p {
+    @include textProps(400, 14px, 20px, $colWhite );
+}
+
+.about_button {
+    text-align: center;
+    letter-spacing: 0.05em;
+    @include ovalProps(170px, 40px, 40px, $colGreen, $colWhite );
+    @include textProps(400, 14px, 16px, $colWhite );
+}
+
+.about_right {
+    position: relative;
+    margin-left: 60px;
+    margin-top: -160px;
+}
+
+.about_circle_big {
+    position: absolute;
+    width: 859px;
+    height: 859px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-position: 50%;
+}
+
+.about_circle_small {
+    width: 677px;
+    height: 677px;
+    border-radius: 50%;
+    background: url('../img/armchair.svg') center no-repeat, rgba(255, 255, 255, 0.4);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transform: translate(12.5%, 12.5%);
+}
+
+.main__special {
+    height: 954px;
+    background: #EFEFEF;
+    position: relative;
+    z-index: 2;
+}
+
+.main__special h2 {
+    @include textProps(700, 24px, 28px, $colBlack );
+}
+
+.special__title {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 80px;
+    padding-bottom: 15px;
+}
+
+.special__products {
+    display: flex;
+    gap: 30px;
+}
+
+.products__item {
+    width: 255px;
+    height: 363px;
+    background: $colWhite;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+
+    img {
+        width: 125px;
+        height: 166px;
+    }
+
+    p {
+        @include textProps(400, 14px, 20px, $colMoreGray);
+    }
+
+    span {
+        @include textProps(500, 21px, 25px, $colBlack )
+    }
+
+    button {
+        padding: 10px 40px;
+        display: flex;
+        align-items: center;
+        @include ovalProps(130px, 35px, 30px, $colGreen , $colWhite );
+        @include textProps(400, 14px, 16px, $colWhite );
+    }
+}
+
+.special_bonus {
+    padding-top: 100px;
+    padding-bottom: 123px;
+    display: flex;
+    gap: 30px;
+}
+
+.bonus_container {
+    max-width: 540px;
+    max-height: 212px;
+    background: #66C05D;
+    padding: 35px 40px;
+    display: flex;
+    gap: 65px;
+}
+
+.left_description {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    h3 {
+        @include textProps(700, 18px, 21px, $colWhite );
+    }
+
+    p {
+        @include textProps(400, 14px, 20px, $colWhite );
+    }
+}
+
+.email_input {
+    @include ovalProps(225px, 35px, 30px, $colWhite , $colGreen );
+
+    &:hover {
+        background: $colWhite;
+        color: $colBlack;
+        border-color: $colGreen;
+    }
+
+    @include textProps(400, 14px, 16px, #C4C4C4);
+    padding: 10px 25px;
+}
+
+.bonus_button {
+    @include textProps(400, 14px, 16px, $colWhite );
+    text-align: center;
+    @include ovalProps(170px, 35px, 30px, $colGreen , $colWhite );
+}
+
+.fullSize {
+    width: 100%;
+}
+
+.footer__info {
+    height: 120px;
+    background: $colWhite;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.links_social {
+    display: flex;
+    gap: 20px;
+}
+
+.social_item {
+    width: 45px;
+    height: 45px;
+    border: 2px solid #66C05D;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.footer_address {
+    @include textProps(400, 14px, 16px, $colBlack );
+}
+
+.footer_callBack {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    span {
+        @include textProps(400, 16px, 19px, $colBlack );
+    }
+
+    button {
+        @include textProps(400, 14px, 16px, $colBlack );
+        @include ovalProps(170px, 40px, 40px, $colWhite , $colGreen );
+    }
+}
+
+.footer__bottom {
+    height: 64px;
+    background: #EFEFEF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    span {
+        @include textProps(400, 12px, 14px, $colGray );
+    }
+}
+
+@media (max-width: 1023px) {
+    .center {
+        padding-left: calc(50% - 300px);
+        padding-right: calc(50% - 300px);
+    }
+
+    .header__menu {
+        height: 40px;
+    }
+
+    .about_left {
+        gap: 25px;
+    }
+
+    .header__top {
+        height: 90px;
+    }
+
+    .main__about {
+        height: 220px;
+    }
+
+    .about_right {
+        display: none;
+    }
+
+    .special__title {
+        padding-top: 30px;
+    }
+
+    .special__products {
+        gap: 90px;
+        flex-wrap: wrap;
+    }
+
+    .main__special {
+        height: auto;
+    }
+
+    .special_bonus {
+        flex-direction: column;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .bonus_container {
+        width: auto;
+        height: auto;
+        max-width: none;
+        max-height: none;
+    }
+
+    .footer__info {
+        flex-wrap: wrap;
+    }
+
+
+    .footer__links {
+        width: 100%;
+    }
+
+    .links_social {
+        gap: 100px;
+        justify-content: center;
+        padding-top: 10px;
+    }
+}
