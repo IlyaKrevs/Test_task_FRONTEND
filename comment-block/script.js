@@ -13,6 +13,12 @@ userName.addEventListener('input', () => {
     }
 });
 
+userName.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        e.preventDefault();
+    }
+})
+
 areaText.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
         e.preventDefault();
@@ -95,15 +101,7 @@ function createCommentBlock() {
         dateCreate = dateNow;
     }
 
-    let timeNow = dateNow.getTime();
-    console.log(timeNow);
-    console.log(dateCreate + 86400e3);
 
-
-
-    let yearNow = dateNow.getFullYear();
-    let monthNow = dateNow.getMonth();
-    let dayNow = dateNow.getDate();
 
     let hoursNow = dateNow.getHours();
     let hourstext = '0' + hoursNow;

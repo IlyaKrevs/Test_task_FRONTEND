@@ -124,6 +124,8 @@ h6 {
   line-height: 100%;
   color: #000000;
   padding: 10px;
+  align-items: center;
+  display: flex;
 }
 .comment_block .error {
   border: 3px solid red;
