@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.comment_container {
+  width: 800px;
+  margin: 50px auto;
+  border: 2px solid black;
+  border-radius: 20px;
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.7);
+  padding: 50px;
+}
+.comment_container h1 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+  color: #000000;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.comment_block {
+  border: 1px solid black;
+  border-radius: 20px;
+  display: grid;
+  grid-template: 80px 150px/1fr 180px;
+  margin-top: 20px;
+}
+.comment_block .comment__name {
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 5px 10px;
+  grid-area: 1/1/1/3;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  color: #000000;
+  padding: 10px;
+}
+.comment_block .error {
+  border: 3px solid red;
+}
+.comment_block .comment__text {
+  margin: 5px 10px;
+  border-radius: 10px;
+  border: 1px solid black;
+  resize: none;
+  padding: 10px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  color: #000000;
+}
+.comment_block .button_container {
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.comment_block .button_container .comment__date {
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 5px;
+  width: 150px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  color: #000000;
+  text-align: center;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.comment_block .button_container .comment__button {
+  border: 2px solid black;
+  background-color: rgba(147, 186, 220, 0.9450980392);
+  border-radius: 10px;
+  height: 50px;
+  width: 150px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  color: #000000;
+}
+.comment_block .button_container .comment__button:hover {
+  background-color: rgb(43, 183, 43);
+}
+.comment_block .button_container .choseIt {
+  background-color: red;
+}
+.comment_block .button_container .reaction_button {
+  border: 1px solid black;
+  border-radius: 20px;
+}
+.comment_block .button_container .reaction_button:hover {
+  background-color: yellow;
+}
