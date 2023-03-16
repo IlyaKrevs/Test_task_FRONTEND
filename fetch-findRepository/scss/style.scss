@@ -1,0 +1,87 @@
+@import '_null_styles.scss';
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Prata&family=Roboto:wght@300;400;500;700&display=swap');
+
+
+$fFam1: 'Roboto';
+
+@mixin textProps($fontF, $weight, $size, $lineH, $color) {
+    font-family: $fontF;
+    font-style: normal;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $lineH;
+    color: $color;
+}
+
+.search_container {
+    width: 800px;
+    height: 200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+
+
+    h1 {
+        @include textProps($fFam1, 700, 32px, 100%, #000)
+    }
+}
+
+.form__container {
+    border: 1px solid black;
+    width: 400px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0 5px 10px;
+    border-radius: 15px;
+}
+
+.search_row {
+    @include textProps($fFam1, 500, 18px, 100%, black);
+    width: 100%;
+}
+
+.search_button {
+    @include textProps($fFam1, 500, 24px, 100%, black);
+    height: 50px;
+    width: 50px;
+    background: white;
+    border: 1px solid black;
+    border-radius: 15px;
+
+    &:hover {
+        background-color: rgb(213, 157, 210);
+    }
+}
+
+.answers {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.item {
+    height: 100px;
+    width: 100%;
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin-top: 10px;
+
+    &:hover {
+        background-color: #feead2;
+    }
+}
+
+.item__link {
+    @include textProps($fFam1, 500, 26px, 100%, black);
+    padding-bottom: 10px;
+}
+
+.item__description {
+    @include textProps($fFam1, 500, 12px, 100%, black);
+}

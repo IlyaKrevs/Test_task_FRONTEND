@@ -114,7 +114,7 @@ function createCommentBlock() {
     } else if (dateCreate + 86400e3 > dateNow - 86400e3 && dateCreate < dateNow) {
         comment__date.textContent = 'Yesterday' + hourstext.slice(-2) + ':' + minutesText.slice(-2);
     } else {
-        comment__date.textContent = date_value.value + " " + hourstext.slice(-2) + ':' + minutesText.slice(-2);;
+        comment__date.textContent = date_value.value + " " + hourstext.slice(-2) + ':' + minutesText.slice(-2);
     }
 
 
