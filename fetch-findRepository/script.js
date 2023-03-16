@@ -49,7 +49,7 @@ function createItem(obj) {
 
     let itemDescription = document.createElement('p');
     itemDescription.classList.add('item__description')
-    itemDescription.textContent = obj.full_name;
+    itemDescription.textContent = obj.description;
 
     itemHead.append(itemLink);
 
